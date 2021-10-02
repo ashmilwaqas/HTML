@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            margin: 0px; 
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            
+            overflow-x: hidden;
+            color: #fff;
+            font-family: 'Flamenco', cursive;
+        }
+        a{
+            color: #fff;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .clearfix::after{
+            content: "";
+            visibility: hidden;
+            display: block;
+            clear: both;
+            height: 0px;
+        }
+        header{
+            height: 150vh;
+            background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(images/header.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .main-container{
+            max-width: 1024vw;
+            margin: 0 auto;
+        }
+        .main-navbar{
+            float: right;
+            margin-top: 60px;
+            list-style: none;
+        }
+        .main-navbar li{
+            display: inline-block; 
+            margin-right: 40px;
+        }
+        .main-navbar li a{
+            color:#fff;    
+            font-size: 90%;
+        }
+        .main-navbar li a:hover{
+            border-bottom: 2px solid #bf55ec;
+        }
+        .header-content{
+            width: 100vw;
+            position: absolute;
+            top: 45%;
+            left: 5%;     
+            transform: translate(-50%, -50%);
+            text-transform: capitalize;   
+        }
+        h2{
+            color: #fff;
+            text-transform: uppercase;
+            word-spacing: 5px;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            font-weight: lighter;
+        }
+        .btn{
+            display: inline-block;
+            padding: 10px 30px;
+            font-weight: lighter;
+            border-radius: 200px;
+            transition: background-color 0.2, border 0.2, color 0.2;
+        }
+        .btn-full{
+            background-color: transparent;
+            color: #bf55ec;
+            margin-right: 15px;
+            border: 2px solid #bf55ec;
+        }
+        .btn-full:hover{
+            background-color: #fff;
+        }
+        .btn-details{
+            background-color: transparent;
+            border: 2px solid #fff;
+        }
+        .btn-details:hover{
+            background-color: #bf55ec;
+        }
+        .mobile-icon{
+            display: none;
+        }
+        /*========================MEDIA RESPONSIVE QUERIES=======================*/
+
+        @media only screen and (max-width:1440px){
+            .header-content{
+                width: 100%;
+                padding: 0px 5%;
+                font-size:24px;
+            }
+        } 
+        @media only screen and (max-width:1024px){
+            .header-content{
+                width: 100%;
+                padding: 0px 5%;
+                
+            }
+            h2{font-size:100%;}
+        } 
+        @media only screen and (max-width:768px){
+            .header-content{
+                width: 100%;
+                padding: 0px 5%;
+            }
+            h2{
+                font-size: 100%;
+            }
+            .main-navbar{
+                display: none;
+                float: left;
+                margin-left: 30px;
+                margin-top: 10px;
+            }
+            .mobile-icon{
+                display:block;
+                color: #fff;
+                font-size: 24px;
+                float: right;
+                margin-top: 30px;
+                margin-right: 20px;
+            }
+            .main-navbar li{
+                
+                display: block; 
+                margin-top: 5px;     
+            }
+
+        } 
+        @media only screen and (max-width:665px){
+            .header-content{
+                width: 100%;
+                padding: 0px 2%;
+            }
+            h2{font-size:80%;}
+            
+        } 
+         @media only screen and (max-width:426px){
+            h2{
+                font-size: 50%;          
+            }
+            header{
+            background-image:linear-gradient(rgb(0, 0, 0),rgba(0,0,0));
+            }
+            .btn-full{
+                margin-bottom: 10px;
+            }
+        } 
+        @media only screen and (max-width:376px){
+            h2{
+                font-size: 40%;          
+            }
+            .btn-full{
+                margin-bottom: 10px;
+            }
+        } 
+        
+        @media screen and (max-width:320px){
+            .btn-full{
+                margin-bottom: 10px;
+            }
+        } 
+        /* @media screen and (min-width:425px){
+            .header-content{
+                width: 100vw;
+                padding: 0px 20%;
+                font-size:cal(16px + 2vw);
+            }
+        } */
+        /* @media screen and (min-width:375px){
+            .header-content{
+                width: 100vw;
+                padding: 0px 20%;
+                font-size:cal(16px + 1.5vw);
+            }
+        } */
+        /* @media screen and (max-width:320px){
+            .header-content{
+                font-size:cal(14px + 2vw);
+            } */
+        
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Flamenco&display=swap" rel="stylesheet">            
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Baking World</title>
+</head>
+<body>
+    <header>
+        <nav>
+          <div class="navbar-container"></div>
+                <ul class="main-navbar animated slideInDown" id="check-navbar">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="#">PORTFOLIO</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                </ul>
+                <a href="#" class="mobile-icon" onclick="slideShow()"><i class="fas fa-bars"><img src="images/bars-solid.svg" alt="bars-solid"></i></a>
+            </div>
+        </nav>
+   
+        <div class="header-content animated bounceInDown">
+                <h2>welcome to our online bakery <span>baking world</span><br>a house for real cake lovers!</h2>
+                <a href="#" class="btn btn-full">Click to order</a>
+                <a href="#" class="btn btn-details">Show me more</a>
+            </div>    
+        </div>
+    </header>
+    <script type="text/javascript">
+        function slideShow(){
+            let x = document.getElementById('check-navbar');
+            if(x.style.display === 'none'){
+                x.style.display = 'block';
+            }else{
+                x.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

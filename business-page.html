@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+         *{
+            margin: 0px; 
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            
+            overflow-x: hidden;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+        }
+        a, button{
+            color: #fff;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .clearfix::after{
+            content: "";
+            visibility: hidden;
+            display: block;
+            clear: both;
+            height: 0px;
+        }
+        header{
+            height: 100vh;
+            background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(images/new-header.jpg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+        .main-menu{
+            width: 100%;
+            height: 10vh;
+            background-color: rgba(0,0,0,0.7);
+        }
+        .left-logo{
+            width: 25%;
+            padding: 1.3% 4%;
+            font-weight: bold;
+            float: left;
+        }
+        .right-menu{
+            width: 75%;
+            font-weight: bold;
+            float: right;
+        }
+        
+        nav ul{
+            list-style: none;
+            padding: 25px 20px;
+            float: right;
+        }
+        nav ul li{
+            display: inline-block;
+            margin: 0px 15px;
+        }
+        nav ul li a:hover{
+            color: sandybrown;
+        }
+        nav ul li a:active{
+            color: sandybrown;
+        }
+        .header-content{
+            margin-top: 200px;
+            text-transform: uppercase;
+            text-align: center;
+
+        }
+        .header-content h4{
+            font-size: 14px;
+            font-family: 'Arial Narrow', Arial, sans-serif;
+            
+        }
+        .header-content h1{
+            font-size: 48px;
+            font-weight:700;
+            margin: 10px 0px;
+        }
+        .header-content h3{
+            font-size: 12px;
+            font-family: 'Arial Narrow', Arial, sans-serif;
+            margin-bottom: 10px;
+            
+        }
+        .header-content #button-share{
+            font-size: 14px;
+            font-weight: 700;
+            color: #000;
+            background-color: #fff;
+            padding: 10px 30px;
+            border: 2px solid #fff;            
+        }
+        .header-content #button-share:hover{
+            font-size: 14px;
+            font-weight: 700;
+            color: #fff;
+            background-color: transparent;
+            padding: 10px 30px;
+            border: 2px solid #fff;
+            
+        }
+        .header-content #button-sub{
+            font-size: 14px;
+            font-weight: 700;
+            color: #fff;
+            background-color:transparent;
+            padding: 10px 16px;
+            border: 2px solid #fff;
+            
+        }
+        .header-content #button-sub:hover{
+            font-size: 14px;
+            font-weight: 700;
+            color: #000;
+            background-color:#fff;
+            padding: 10px 16px;
+            border: 2px solid #fff;
+            
+        }
+        .mobile-icon{
+            display: none;
+        }
+        
+        /* ==================== MEDIA QUERIES ======================= */
+
+        @media only screen and (max-width:1440px){
+            
+            .left-logo h2{
+                font-size: 100%;
+                padding-top: 20px;
+            }
+            .header-content{
+                width: 100%;
+                padding: 0px 5%;
+                font-size:24px;
+            }
+        } 
+        @media only screen and (max-width:1024px){
+           
+            .left-logo h2{
+                font-size: 100%;
+                padding-top: 20px;
+            }
+            .header-content{
+                width: 100%;
+                padding: 0px 5%;
+                
+            }
+            h2{font-size:100%;}
+        } 
+        @media only screen and (max-width:768px){
+            .left-logo h2{
+                font-size: 80%;
+                padding-top: 20px;
+            }
+            .header-content h1{
+                font-size: 180%;
+            }
+            .main-navbar{
+                display: none;
+                float: left;
+                margin-left: 30px;
+                margin-top: 10px;
+            }
+            .mobile-icon{
+                height: 100px;
+                width: 100px;
+                display:block;
+                color: #fff;
+                font-size: 24px;
+                float: right;
+                margin-top: 30px;
+                margin-right: 20px;
+            }
+            .main-navbar li{
+                
+                display: block; 
+                margin-top: 5px;     
+            }
+
+        } 
+        @media only screen and (max-width:658px){
+            .header-content h1{font-size:160%;}
+        }
+        @media only screen and (max-width:605px){
+            .left-logo h2{
+                font-size: 50%;
+                padding-top: 20px;
+            }
+        }
+        @media only screen and (max-width:580px){
+            .header-content h1{font-size:140%;}
+        }
+        
+        @media only screen and (max-width:485px){
+            .header-content{
+                width: 100%;
+                padding: 0px 2%;
+            }
+            .header-content h1{font-size:120%;}
+            
+        } 
+         @media only screen and (max-width:420px){
+            .header-content h1{
+                font-size: 120%;          
+            }
+            .btn-full{
+                margin-bottom: 10px;
+            }
+        } 
+        @media only screen and (max-width:378px){
+            .left-logo h2{
+                font-size: 50%;
+                padding-top: 20px;
+            }
+            .header-content h1{
+                font-size: 100%;          
+            }
+        }
+        @media only screen and (max-width:355px){
+           
+            .header-content h1{
+                font-size: 130%;          
+            }
+            .header-content h3{
+                font-size: 60%;          
+            }
+        } 
+        
+        @media screen and (max-width:320px){
+            .btn-full{
+                margin-bottom: 10px;
+            }
+            .header-content h1{
+                font-size: 80%;          
+            }
+            .header-content h3{
+                font-size: 40%;          
+            }
+        } 
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="my-first-website/favicon.ico?v=2" type="image/x-icon">
+    <title>business-webpage</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="main-menu">
+                <div class="left-logo">
+                    <h2>IT Solutions</h2>
+                </div>
+                <div class="right-menu">
+                    <nav>
+                        <ul id="check-navbar">
+                            <li><a href="business-page.html">HOME</a></li>
+                            <li><a href="#">ABOUT</a></li>
+                            <li><a href="#">SERVICE</a></li>
+                            <li><a href="#">PORTFOLIO</a></li>
+                            <li><a href="#">CONTACT US</a></li>
+                        </ul>
+                        <a href="#" class="mobile-icon" onclick="slideShow()"><i class="fas fa-bars">|||</i></a>
+                    </nav>
+                   
+                </div>
+            </div>
+            
+            <section>
+                <div class="header-content">
+                    <h4>Design . Development . branding</h4>
+                    <h1>CREATIVE & EXPERIENCED</h1>
+                    <h3>WE ARE ONE OF THE WORLDS'S BEST CREATIVE DESIGNS AGENCIES.</h3>
+                    <BUTTon id="button-share">SHARE</BUTTon>
+                    <BUTTon id="button-sub">SUBSCRIBE</BUTTon>
+                </div>
+            </section>
+        </div>
+        <script type="text/javascript">
+            function slideShow(){
+                let x = document.getElementById('check-navbar');
+                if(x.style.display === 'none'){
+                    x.style.display = 'block';
+                }else{
+                    x.style.display = 'none';
+                }
+            }
+        </script>
+    </header>
+</body>
+</html>

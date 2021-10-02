@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            margin: 0px; 
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            
+            overflow-x: hidden;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+        }
+        a, button{
+            color: #fff;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .clearfix::after{
+            content: "";
+            visibility: hidden;
+            display: block;
+            clear: both;
+            height: 0px;
+        }
+        
+        header{
+            width: 100%;
+            height: 100vh;
+            background-image:linear-gradient(rgba(138, 136, 136, 0.2),rgba(138, 136, 136,0.2)), url(images/faisal-mosque.jpg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+        .logo{
+            width: 25%;
+            height: 10vh;
+            background-color:rgba(255, 125, 4, 0.9);
+            font-size: 24px;
+            font-weight: bold;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            
+        }
+        .menu{
+            width: 100%;
+            height: 10vh;
+        }
+        nav{
+            width: 100%;
+            background-color: rgba(0,0,0,0.5);
+            font-weight: bold;
+            justify-content: space-between;
+            display: flex;
+            align-items: center;
+        }
+        nav ul{
+            list-style: none;
+            float: right;
+        }
+        nav ul li{
+            display: inline-block;
+            margin: 20px 50px 0px 35px;
+           
+        }
+        nav ul li a{
+            margin: 20px 50px 0px 35px;
+            display: block;
+            top: 0px;
+            right: 50px;
+           
+        }
+        nav ul li a:hover{
+            color: sandybrown;
+            position: relative;
+            transition:transform 0.8s;
+            
+        }
+        nav ul li a:active{
+            color: sandybrown;
+        }
+        main{
+            width: 100%;
+            height: 90%;
+            justify-content:center;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+        section h1{
+            text-shadow: 1px 2px 5px black;
+            margin: 10px 0 20px 0;
+            letter-spacing: 3px;
+            font-size: 48px;
+            font-weight: 300;
+        }
+        section h3{
+            text-shadow: 1px 2px 5px black;
+            margin: 10px 0 20px 0;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+        section p{
+            margin-bottom: 25px;
+            font-size: 26px;
+            color: #000;
+            word-spacing: 3px;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 1px #000;
+        }
+        section a{
+            padding: 12px 20px;
+            margin-top: 10px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            outline: none;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            
+        }
+        section .btn-learn{
+            width: 100%;
+            background-color:orange;
+            transition: transform 0.5s;
+        }
+        section .btn-learn:hover{
+            background-color:#fff;
+            color: #000;
+            transform: scale(1.5);
+        }
+        section .btn-signup{
+            background-color: #fff;
+            color: #000;
+        }
+        section .btn-signup:hover{
+            background-color: orange;
+            color: #fff;
+        }
+        .row{
+            width: 100%;
+            height: 100vh;
+            padding: 30px 20px;
+            border: 2px solid #000;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card-1{
+            width: 20%;
+            height: auto;
+            margin: 80px 20px;
+            display: inline-block;
+            border: 2px solid #000;
+            box-shadow: 1px 1px 1px #000;
+            color: #000;
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .card-1 img{
+            width: 80px;
+            height: 15vh; 
+            margin: 0px 100px; 
+            margin-top: 20px;    
+            /* position: absolute;
+            left: 220px;
+            top: 760px;
+            z-index: 1; */
+            
+        }
+
+        .card-1 h2{
+            color:#000;
+            text-align: center;
+            margin-top: 50px;
+
+        }
+        .card-1 h4{
+            color:#000;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+        h4 span{
+            color:orange;
+        }
+        .card-1 a{
+            padding: 12px 20px;
+            margin: 0px 60px;
+            background-color:orange;
+            border-radius: 4px;
+            text-transform: uppercase;
+            outline: none;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 1px;
+           
+        }
+        .card-1 a:hover{
+            box-shadow: 1px 2px #000;
+            transition: all 0.5s ease;
+            
+        }
+        /* CARD 2 CSS */
+
+        .card-2{
+            width: 20%;
+            height: 60vh;
+            margin: 80px 20px;
+            display: inline-block;
+            border: 2px solid #000;
+            box-shadow: 1px 1px 1px #000;
+            color: #000;
+            border-radius: 20px;
+            transition: transform .2s; /* Animation */
+        }
+        .card-2:hover{
+            width: 20%;
+            transform: scale(1.2); /* Animation */
+        }
+
+        .card-2 img{
+            width: 80px;
+            height: 15vh; 
+            margin: 0px 100px; 
+            margin-top: 20px;    
+            /* position: absolute;
+            left: 220px;
+            top: 760px;
+            z-index: 1; */
+            
+        }
+
+        .card-2 h2{
+            color:#000;
+            text-align: center;
+            margin-top: 50px;
+
+        }
+        .card-2 h4{
+            color:#000;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+        h4 span{
+            color:orange;
+        }
+        .card-2 a{
+            padding: 12px 20px;
+            margin: 0px 60px;
+            background-color:orange;
+            border-radius: 4px;
+            text-transform: uppercase;
+            outline: none;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 1px;
+           
+        }
+        .card-2 a:hover{
+            box-shadow: 1px 4px 8px 0 rgba(0,0,0,0.5);
+            transition: all 0.5s ease;
+            
+        }
+
+        /* MEDIA QUERIES FOR SMALL SCREENS */
+
+        @media only screen and (max-width:1100px){
+
+            .card-1{
+            display: inline-block;
+                
+            }
+            .card-1 a{padding: 12px 15px ;}
+            .card-2{
+                display: block;
+                
+            }
+
+        
+        @media only screen and (max-width:770px){
+
+            .card-1{
+                width: 18%;
+               display: block;
+                
+            }
+            .card-1 a{padding: 12px 15px ;}
+            .card-2{
+                display: block;
+                
+            }
+        }
+
+    }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Guide</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="#">trevalGuide.ca</a></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <section>
+                <h3>welcome to pakistan.</h3>
+                <h1>VISIT AND EXPLORE PAKISTAN <span> </span></h1>
+                <p>pakistan, just ones is not enough!</p>
+                <a href="#" class="btn-learn">Learn More</a>
+                <a href="#" class="btn-signup">Signup here</a>
+            </section>
+        </main>
+    </header>
+    <section>
+        <div class="row">
+           <div class="card-1">
+                <img src="images/offer.png" alt="">
+                <h2>Amazing Offers</h2>
+                <h4>Get <span>50%</span> discount</h4>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="card-2">
+                <img src="images/offer.png" alt="">
+                <h2>Amazing Offers</h2>
+                <h4>Get <span>50%</span> discount</h4>
+                <a href="#">Learn More</a>
+            </div>    
+            <div class="card-1">
+                <img src="images/offer.png" alt="">
+                <h2>Amazing Offers</h2>
+                <h4>Get <span>50%</span> discount</h4>
+                <a href="#">Learn More</a>
+            </div>    
+             <div class="card-1">
+                <img src="images/offer.png" alt="">
+                <h2>Amazing Offers</h2>
+                <h4>Get <span>50%</span> discount</h4>
+                <a href="#">Learn More</a>
+            </div>    
+        </div>
+    </section>
+</body>
+</html>
